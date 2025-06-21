@@ -25,7 +25,7 @@ class UsersOrm(Base):
     password: Mapped[str_256] = mapped_column(nullable=False)
     first_name: Mapped[str_256]
     last_name: Mapped[str_256]
-    active: Mapped[bool] = mapped_column(default=True)
+    is_active: Mapped[bool] = mapped_column(default=True)
     is_verified: Mapped[bool] = mapped_column(default=False)
     is_administrator: Mapped[bool] = mapped_column(default=False)
     created_at: Mapped[created_at]
