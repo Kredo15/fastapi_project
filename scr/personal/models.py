@@ -2,7 +2,7 @@ from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from scr.common.enums import StatusEnum, TypeNotificationsEnum
 from scr.common.base_model import Base, intpk, created_at, updated_at
-from scr.user.models import UsersOrm
+from scr.auth.models import UsersOrm
 from scr.content.models import PostsOrm
 from scr.group.models import GroupsOrm
 from scr.event.models import EventsOrm

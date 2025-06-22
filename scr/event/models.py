@@ -4,7 +4,7 @@ from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from scr.common.enums import PrivacyEnum, StatusEventsEnum
 from scr.common.base_model import Base, intpk, str_256, created_at
-from scr.user.models import UsersOrm
+from scr.auth.models import UsersOrm
 from scr.group.models import GroupsOrm
 
 

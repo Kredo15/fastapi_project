@@ -3,7 +3,7 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from scr.common.enums import PrivacyEnum
 from scr.common.base_model import Base, intpk, created_at, str_256
-from scr.user.models import UsersOrm
+from scr.auth.models import UsersOrm
 from scr.tag.models import TaggingsOrm
 
 

@@ -3,7 +3,7 @@ from datetime import datetime, date
 from pydantic import BaseModel
 
 from scr.common.enums import PrivacyEnum, StatusEventsEnum
-from scr.user.schemas import UsersSchema
+from scr.auth.schemas import UsersSchema
 from scr.group.schemas import GroupsSchema
 
 

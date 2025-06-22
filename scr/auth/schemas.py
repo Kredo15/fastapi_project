@@ -1,13 +1,22 @@
-from datetime import datetime, date
+from datetime import datetime
 
 from pydantic import BaseModel, EmailStr
 
-from scr.common.enums import GenderEnum, FamilyStatusEnum
+from scr.profile.schemas import ProfileSchema
 from scr.personal.schemas import FriendsSchema, MessagesSchema, NotificationsSchema
 from scr.media.schemas import PhotosSchema, AlbumsSchema, VideosSchema
 from scr.content.schemas import PostsSchema, CommentsSchema, LikeSchema
 from scr.group.schemas import GroupsSchema, GroupMembersSchema
 from scr.event.schemas import EventsSchema, EventMembersSchema
+
+
+class TokenSchema(BaseModel):
+    access_token: str
+    token_type: str
+
+
+class TokenDataSchema(BaseModel):
+    username: str | None = None
 
 
 class UsersAddSchema(BaseModel):
@@ -25,25 +34,6 @@ class UsersSchema(UsersAddSchema):
     is_administrator: bool
     created_at: datetime
     last_login: datetime
-
-
-class ProfileAddSchema(BaseModel):
-    user_id: int
-    gender: GenderEnum | None
-    date_of_birth: date
-    photo: str | None
-    city: str | None
-    country: str | None
-    family_status: FamilyStatusEnum | None
-    additional_information: str | None
-
-
-class ProfileSchema(ProfileAddSchema):
-    id: int
-
-
-class ProfileRelSchema(ProfileAddSchema):
-    user: "UsersSchema"
 
 
 class UsersRelSchema(UsersSchema):

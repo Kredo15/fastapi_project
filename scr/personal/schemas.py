@@ -3,7 +3,7 @@ from datetime import datetime
 from pydantic import BaseModel
 
 from scr.common.enums import StatusEnum, TypeNotificationsEnum
-from scr.user.schemas import UsersSchema
+from scr.auth.schemas import UsersSchema
 
 
 class FriendsAddSchema(BaseModel):
